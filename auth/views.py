@@ -21,3 +21,4 @@ def login(request: HttpRequest):
     headers = {"Authorization": "Bearer " + access_token, "content-type": "application/x-www-form-urlencoded"}
     body = {"code": access_code, "grant_type": GRANT_TYPE, "redirect_uri": REDIRECT_URI}
     response = requests.post(ACCESS_URL + ACCESS_TOKEN, body, headers=headers)
+    
